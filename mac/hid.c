@@ -860,7 +860,6 @@ hid_device * HID_API_EXPORT hid_open_path(const char *path)
 			/* Get the IORegistry entry for the given path */
 			entry = IORegistryEntryFromPath(kIOMasterPortDefault, path);
 			if (entry == MACH_PORT_NULL) {
-                printf("mach_port_null!\n");
 				/* Path wasn't valid (maybe device was removed?) */
 				goto return_error;
 			}
